@@ -1,0 +1,71 @@
+/* Wine Nutrition Manager – admin */
+.wnm-wrap .nav-tab-wrapper { margin-bottom: 16px; }
+
+.wnm-stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; margin: 0 0 12px; }
+.wnm-card { background: #fff; border: 1px solid #dcdcde; border-radius: 8px; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; }
+.wnm-card__value { font-size: 24px; font-weight: 600; line-height: 1.2; }
+.wnm-card__label { color: #50575e; font-size: 12px; }
+.wnm-card--completed .wnm-card__value { color: #008a20; }
+.wnm-card--missing_nutrition .wnm-card__value,
+.wnm-card--missing_ingredients .wnm-card__value { color: #b32d2e; }
+.wnm-card--missing_qr .wnm-card__value,
+.wnm-card--without_sku .wnm-card__value,
+.wnm-card--orphaned_records .wnm-card__value { color: #996800; }
+.wnm-pending { margin: 0 0 12px; color: #50575e; }
+
+.wnm-toolbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 12px; }
+.wnm-toolbar input[type="search"] { min-width: 260px; }
+
+.wnm-table { transition: opacity .15s; }
+.wnm-table.is-loading { opacity: .5; pointer-events: none; }
+.wnm-table th.wnm-sortable { cursor: pointer; text-decoration: underline dotted; }
+.wnm-table th[aria-sort="ascending"]::after { content: " ▲"; }
+.wnm-table th[aria-sort="descending"]::after { content: " ▼"; }
+.wnm-table td { vertical-align: middle; }
+.wnm-cats { color: #50575e; font-size: 12px; }
+.wnm-post-status { color: #996800; font-size: 12px; }
+
+.wnm-badge { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 12px; line-height: 18px; font-weight: 500; }
+.wnm-badge.is-ok { background: #e6f4ea; color: #0a5c1d; }
+.wnm-badge.is-bad { background: #fcecec; color: #8a1f1f; }
+.wnm-badge.is-neutral { background: #f0f0f1; color: #50575e; }
+
+.wnm-edit-row > td { background: #f6f7f7 !important; padding: 16px !important; }
+.wnm-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px 14px; }
+.wnm-field { display: flex; flex-direction: column; gap: 4px; }
+.wnm-field.is-wide { grid-column: 1 / -1; }
+.wnm-field label { font-weight: 600; font-size: 12px; }
+.wnm-field input, .wnm-field textarea { width: 100%; }
+.wnm-editor__actions { display: flex; align-items: center; gap: 12px; margin-top: 12px; }
+.wnm-delete { color: #b32d2e !important; margin-left: auto !important; }
+.wnm-msg.is-success { color: #008a20; }
+.wnm-msg.is-warning { color: #996800; }
+.wnm-msg.is-error { color: #b32d2e; }
+
+.wnm-pager { display: flex; gap: 8px; align-items: center; justify-content: flex-end; margin-top: 12px; }
+
+.wnm-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 16px; }
+.wnm-panel { background: #fff; border: 1px solid #dcdcde; border-radius: 8px; padding: 4px 20px 16px; margin-bottom: 16px; }
+.wnm-check { display: block; margin: 6px 0; }
+.wnm-label-row { display: grid; grid-template-columns: 130px 1fr; align-items: center; gap: 8px; margin: 6px 0; }
+.wnm-custom-table input[type="text"] { width: 100%; }
+
+.wnm-preview { max-width: 720px; margin: 8px 0 16px; }
+.wnm-preview th { width: 55%; font-weight: 600; }
+.wnm-warn { color: #996800; }
+.wnm-errors { max-height: 220px; overflow: auto; font-family: monospace; font-size: 12px; }
+.wnm-options { margin: 12px 0; }
+.wnm-progress { height: 10px; background: #f0f0f1; border-radius: 5px; overflow: hidden; max-width: 720px; }
+.wnm-progress__bar { height: 100%; width: 0; background: #2271b1; transition: width .2s; }
+.wnm-cancel-form { display: inline-block; }
+.wnm-import-actions { display: inline-block; margin-right: 8px; }
+
+.wnm-log-error td { background: #fcecec !important; }
+.wnm-log-warning td { background: #fcf9e8 !important; }
+.wnm-run { font-family: monospace; font-size: 11px; margin-left: 6px; }
+
+@media (max-width: 782px) {
+	.wnm-table thead { display: none; }
+	.wnm-table tr:not(.wnm-edit-row) td { display: inline-block; border: 0; padding: 4px 6px; }
+	.wnm-label-row { grid-template-columns: 1fr; }
+}

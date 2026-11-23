@@ -1,0 +1,6 @@
+<wpml-config>
+	<custom-fields>
+		<!-- Rendered per translation by the plugin (labels in that language). Never copy between languages. -->
+		<custom-field action="ignore">wnm_nutrition_html</custom-field>
+	</custom-fields>
+</wpml-config>
