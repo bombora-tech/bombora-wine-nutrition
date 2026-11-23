@@ -4,7 +4,7 @@
 
 ```
 wine-nutrition-manager/
-├── wine-nutrition-manager.php   Bootstrap: constants, autoloader, activation hooks, HPOS declaration
+├── bombora-wine-nutrition.php   Bootstrap: constants, autoloader, activation hooks, HPOS declaration
 ├── uninstall.php                Keeps all data; drops only with WNM_DELETE_DATA_ON_UNINSTALL
 ├── src/
 │   ├── Autoloader.php           PSR-4 (WineNutrition\ → src/, chillerlan\ → vendor/)

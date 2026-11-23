@@ -34,9 +34,11 @@ final class AdminPage {
 	}
 
 	public function menu(): void {
+		// Pod menu Bombora (Bombora Manager), jinak pod WooCommerce. Adresa stránky zůstává stejná.
+		$parent     = isset( $GLOBALS['admin_page_hooks']['bombora'] ) ? 'bombora' : 'woocommerce';
 		$this->hook = (string) add_submenu_page(
-			'woocommerce',
-			__( 'Wine Nutrition', 'wine-nutrition-manager' ),
+			$parent,
+			__( 'Bombora Wine Nutrition', 'wine-nutrition-manager' ),
 			__( 'Wine Nutrition', 'wine-nutrition-manager' ),
 			Plugin::capability(),
 			self::SLUG,

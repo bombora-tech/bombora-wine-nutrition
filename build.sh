@@ -3,7 +3,7 @@
 # Použití: ./build.sh  → dist/wine-nutrition-manager.zip + .sha256
 set -euo pipefail
 cd "$(dirname "$0")"
-SLUG="wine-nutrition-manager"
+SLUG="bombora-wine-nutrition"
 VERSION="$(grep -m1 -E '^\s*\*\s*Version:' ${SLUG}.php | sed -E 's/.*Version:\s*//; s/\s+$//')"
 CONST="$(grep -m1 "define( 'WNM_VERSION'" ${SLUG}.php | sed -E "s/.*'WNM_VERSION', '([^']+)'.*/\1/")"
 if [[ "$VERSION" != "$CONST" ]]; then echo "Chyba: Version ($VERSION) ≠ WNM_VERSION ($CONST)" >&2; exit 1; fi

@@ -1,4 +1,4 @@
-# Wine Nutrition Manager for WooCommerce
+# Bombora Wine Nutrition (WooCommerce)
 
 Centralized, SKU-based management of wine nutrition declarations, ingredients, allergens and e-label QR links. One record per SKU, shared by every language and transferable between shops via CSV. Output via the `[wine_nutrition]` shortcode (default, for Bricks/builder templates) and/or a self-contained HTML block written into the product description (stays visible if the plugin is disabled). See `docs/BRICKS.md`.
 
@@ -11,10 +11,10 @@ Centralized, SKU-based management of wine nutrition declarations, ingredients, a
 
 ## Installation
 
-1. Upload the `wine-nutrition-manager` folder to `wp-content/plugins/` (or upload the ZIP in **Plugins › Add New › Upload**).
+1. Install via **Bombora → Modules** (Bombora Manager), or upload the `bombora-wine-nutrition` folder to `wp-content/plugins/` (or upload the ZIP in **Plugins › Add New › Upload**).
 2. Activate. Activation creates `{prefix}wine_nutrition` and `{prefix}wine_nutrition_log` with `dbDelta()`; existing tables and data are never overwritten.
 3. **WooCommerce › Status › Tools › Regenerate product lookup tables** – run once if the shop was migrated/imported. SKU matching uses `wc_product_meta_lookup`.
-4. **WooCommerce › Wine Nutrition › Settings** – choose fields, enter frontend labels in the default site language, save.
+4. **Bombora › Wine Nutrition › Settings** – choose fields, enter frontend labels in the default site language, save.
 5. With WPML: translate the labels in **WPML › String Translation**, context `Wine Nutrition Manager`.
 6. Import the first CSV (**Import / Export** tab) or edit records in the **Dashboard**.
 
