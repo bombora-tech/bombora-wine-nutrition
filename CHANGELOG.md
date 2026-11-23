@@ -1,5 +1,8 @@
 # Changelog – Bombora Wine Nutrition
 
+## [2.0.1] – 2026-11-23
+- Bezpečnější souběh se starou složkou: když je stará verze ještě aktivní, nová kopie se nenačte (žádná kolize funkcí/tříd, běží stará verze, dokud převod nedokončí Bombora Manager).
+
 ## [2.0.0] – 2026-11-23
 - Přejmenováno na **Bombora Wine Nutrition**; složka `bombora-wine-nutrition` (dříve `wine-nutrition-manager`), hlavní soubor `bombora-wine-nutrition.php`. Přechod provede Bombora Manager 1.1+, data (tabulky `wine_nutrition*`, nastavení, QR v uploads) zůstávají.
 - Menu přesunuto pod **Bombora** (pokud je nainstalovaný Manager), adresa `admin.php?page=wine-nutrition` beze změny.

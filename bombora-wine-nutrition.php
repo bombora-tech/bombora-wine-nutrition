@@ -4,7 +4,7 @@
  * Plugin URI:        https://github.com/bombora-tech/bombora-wine-nutrition
  * Update URI:        https://github.com/bombora-tech/bombora-wine-nutrition
  * Description:       Centralized, SKU-based management of wine nutrition declarations, ingredients, allergens and e-label QR codes for WooCommerce. Renders a persistent nutrition block into product descriptions.
- * Version:           2.0.0
+ * Version:           2.0.1
  * Requires at least: 6.0
  * Requires PHP:      8.1
  * Requires Plugins:  woocommerce
@@ -19,12 +19,13 @@
 
 defined( 'ABSPATH' ) || exit;
 
-// Pojistka: jiná kopie pluginu (např. stará složka wine-nutrition-manager) už běží – nic znovu nedeklarovat.
-if ( defined( 'WNM_VERSION' ) ) {
+// Pojistka: jiná kopie už běží, nebo je aktivní stará složka wine-nutrition-manager (načítá se až po této) –
+// pak tato kopie nic nedeklaruje a běží jen stará verze, dokud ji Bombora Manager nepřevede.
+if ( defined( 'WNM_VERSION' ) || in_array( 'wine-nutrition-manager/wine-nutrition-manager.php', (array) get_option( 'active_plugins', array() ), true ) ) {
 	return;
 }
 
-define( 'WNM_VERSION', '2.0.0' );
+define( 'WNM_VERSION', '2.0.1' );
 define( 'WNM_DB_VERSION', '1.1.0' );
 define( 'WNM_FILE', __FILE__ );
 define( 'WNM_DIR', plugin_dir_path( __FILE__ ) );
